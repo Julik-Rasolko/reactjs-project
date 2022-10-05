@@ -3,30 +3,31 @@ import classes from "./card.module.css"
 
 export default function Card({title, text, likes}) {
     const [counter, setCounter] = useState(likes)
-    const [is_liked, setLiked] = useState(false)
-    const [smile, setSmile] = useState("👍")
+    const [isLiked, setLiked] = useState(false)
 
     const like = () => {
-        if(is_liked) {
+        if(isLiked) {
             setCounter(oldCounter => oldCounter - 1)
             setLiked(false)
-            setSmile("👍")
         }
         else {
             setCounter(oldCounter => oldCounter + 1)
             setLiked(true)
-            setSmile("👎")
         }
     }
 
-    const buttonColor = is_liked? "red" : "green"
+    const buttonColor = isLiked? "red" : "green"
+    const smile = isLiked? "👎" : "👍"
 
     return (
         <div className={classes.card}>
             <h1>{title}</h1>
             <div className={classes.text}>{text}</div>
             <div className={classes.likes}>Likes: {counter}</div> 
-            <div className={classes.button} onClick={like} style={{backgroundColor: buttonColor}}>{smile}</div>
+            <div className={classes.button} 
+                onClick={like} 
+                style={{backgroundColor: buttonColor}}
+            >{smile}</div>
         </div>
     )
 }
