@@ -1,23 +1,19 @@
-import logo from './logo.svg';
+import React, {useState} from "react";
 import './App.css';
+import Card from "./components/card/card"
+import mockData from './assets/mock-data.json'
 
 function App() {
+  const num = 0
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ul>
+        {mockData.map(it => <Card 
+          title={it.title} 
+          text={it.text} 
+          likes={it.likes}
+        />)}
+      </ul>
     </div>
   );
 }
