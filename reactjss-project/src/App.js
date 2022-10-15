@@ -12,6 +12,7 @@ function App() {
           title={it.title} 
           text={it.text} 
           likes={it.likes}
+          comments={it.comments}
         />)}
       </ul>
     </div>

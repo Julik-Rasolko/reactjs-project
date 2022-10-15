@@ -1,12 +1,34 @@
 [
     {
-        "title": "First piece",
-        "text": "Hello there on the first button",
-        "likes": 0
+        "title": "Cats",
+        "text": "Cats are better than dogs, aren't they?",
+        "likes": 99,
+        "comments": [
+            "Oh totally agree!",
+            "Hell no",
+            "You know... there is something to think about"
+        ]
     },
     {
-        "title": "Second piece",
-        "text": "Hello there on the second button",
-        "likes": 100
+        "title": "Dogs",
+        "text": "Dogs are better than cats, aren't they?",
+        "likes": 100,
+        "comments": [
+            "You could not be more right you awesome author",
+            "NO CATS ARE BETTER!!!"
+        ]
+    },
+    {
+        "title": "Other animals",
+        "text": "Share YOUR favoutite animal!",
+        "likes": 10994758943,
+        "comments": [
+            "ARMADILLOS!!!",
+            "I really love parrots 🦜",
+            "Sharks hehe 🦈",
+            "Someone wrote armadillos omg same",
+            "Octopus 🐙, or is it only me))",
+            "Snakes 🐍"
+        ]
     }
 ]

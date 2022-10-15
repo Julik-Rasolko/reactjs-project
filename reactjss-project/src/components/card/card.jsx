@@ -1,9 +1,11 @@
 import React, {useState} from "react";
 import classes from "./card.module.css"
+import CommentStuff from "./comment-stuff/commentStuff";
 
-export default function Card({title, text, likes}) {
+export default function Card({title, text, likes, comments}) {
     const [counter, setCounter] = useState(likes)
     const [isLiked, setLiked] = useState(false)
+    const [toSeeComments, setToSeeComments] = useState(false)
 
     const like = () => {
         if(isLiked) {
@@ -16,8 +18,13 @@ export default function Card({title, text, likes}) {
         }
     }
 
+    const ifSeeComments = () => {
+        setToSeeComments(oldVal => !oldVal)
+    }
+
     const buttonColor = isLiked? "red" : "green"
     const smile = isLiked? "👎" : "👍"
+    const commentsText = toSeeComments? "Hide comments" : "See comments"
 
     return (
         <div className={classes.card}>
@@ -28,6 +35,11 @@ export default function Card({title, text, likes}) {
                 onClick={like} 
                 style={{backgroundColor: buttonColor}}
             >{smile}</div>
+            <CommentStuff comments={comments}
+                        toSeeComments={toSeeComments}/>
+            <div className={classes.commButton}
+                onClick={ifSeeComments}
+            >{commentsText}</div>
         </div>
     )
 }
