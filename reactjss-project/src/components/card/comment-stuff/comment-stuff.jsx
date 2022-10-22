@@ -1,6 +1,6 @@
 import React, {useState} from "react";
-import CommentBlock from "./comment-block/commentBlock";
-import classes from "./commentStuff.module.css";
+import CommentBlock from "./comment-block/comment-block";
+import classes from "./comment-stuff.module.css";
 
 export default function CommentStuff({comments, toSeeComments}) {
     const [arr, setArr] = useState(comments)
