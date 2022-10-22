@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import classes from "./card.module.css"
-import CommentStuff from "./comment-stuff/commentStuff";
+import CommentStuff from "./comment-stuff/comment-stuff";
 
 export default function Card({title, text, likes, comments}) {
     const [counter, setCounter] = useState(likes)
